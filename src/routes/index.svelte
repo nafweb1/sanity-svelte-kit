@@ -21,14 +21,14 @@
 </script>
 
 <svelte:head>
-  <title>Blog</title>
+  <title>Nyheter</title>
 </svelte:head>
 
-<h1>Recent posts</h1>
+<h1>Siste nyheter</h1>
 
 <PostsGrid {posts} />
 
-<h2 style="margin-top: 4rem">Author{authors.length > 1 ? 's' : ''}</h2>
+<h2 style="margin-top: 4rem">Forfatter{authors.length > 1 ? 'e' : ''}</h2>
 
 {#each authors as author}
   <AuthorCard {author} />
