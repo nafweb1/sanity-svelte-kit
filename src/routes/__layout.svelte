@@ -3,7 +3,7 @@
   import Footer from '$lib/Footer.svelte'
 </script>
 
-<Header blogTitle={'SvelteKit x Sanity Blog'} />
+<Header blogTitle={'Norsk anestesiologisk forening'} />
 
 <main style="padding: 1em">
   <slot />

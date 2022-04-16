@@ -3,7 +3,7 @@
 </script>
 
 <script>
-  export let blogTitle = 'My Blog'
+  export let blogTitle = 'Norsk anestesiologisk forening - NAFWeb'
 
   let path
   $: ({path} = $page)
@@ -13,7 +13,8 @@
   <span>{blogTitle}</span>
   <nav>
     <ul>
-      <li><a data-selected={path === '/'} href="/">home</a></li>
+      <li><a data-selected={path === '/'} href="/">Hjem</a></li>
+      <li><a data-selected={path === '/nyheter'} href="/">Nyheter</a></li>
     </ul>
   </nav>
 </header>

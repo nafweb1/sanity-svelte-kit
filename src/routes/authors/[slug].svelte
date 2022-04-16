@@ -55,6 +55,6 @@
   />
 {/if}
 
-<h2>Posts by {author.name}</h2>
+<h2>Innlegg av {author.name}</h2>
 
 <PostsGrid posts={author.posts} />
