@@ -14,7 +14,7 @@
   <nav>
     <ul>
       <li><a data-selected={path === '/'} href="/">Hjem</a></li>
-      <li><a data-selected={path === '/nyheter'} href="/">Nyheter</a></li>
+      <li><a data-selected={path === '/nyheter'} href="/nyheter">Nyheter</a></li>
     </ul>
   </nav>
 </header>

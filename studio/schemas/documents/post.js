@@ -3,21 +3,21 @@ import {DocumentIcon} from '@sanity/icons'
 export default {
   name: 'post',
   type: 'document',
-  title: 'Blog Post',
+  title: 'Artikler',
   icon: DocumentIcon,
   fields: [
     {
       name: 'title',
       type: 'string',
-      title: 'Title',
-      description: 'Titles should be catchy, descriptive, and not too long',
+      title: 'Tittel',
+      description: 'Tittelen b&oslash;r v&aelig;re catcy, beskrivende og ikke for lang',
       validation: (Rule) => Rule.required()
     },
     {
       name: 'slug',
       type: 'slug',
-      title: 'Slug',
-      description: 'Address of this post in the website',
+      title: 'Korttekst',
+      description: 'Denne artikkelens adresse p&aring; nettstedet',
       options: {
         source: 'title',
         maxLength: 96
@@ -27,17 +27,17 @@ export default {
     {
       name: 'publishedAt',
       type: 'datetime',
-      title: 'Published at',
-      description: 'This can be used to schedule post for publishing'
+      title: 'Publiseringsdato',
+      description: 'Dette kan brukes for &aring; planlegge publisering av artikler'
     },
     {
       name: 'image',
       type: 'image',
-      title: 'Main image'
+      title: 'Hovedbilde'
     },
     {
       name: 'authors',
-      title: 'Authors',
+      title: 'Forfatter(e)',
       type: 'array',
       of: [
         {
@@ -48,7 +48,7 @@ export default {
     {
       name: 'categories',
       type: 'array',
-      title: 'Categories',
+      title: 'Kategorier',
       of: [
         {
           type: 'reference',
@@ -59,10 +59,16 @@ export default {
       ]
     },
     {
+      name: 'featured',
+      type: 'boolean',
+      title: 'Vises p&aring; forsiden',
+      description: 'Kryss av p&aring; denne dersom artikelen skal vises p&aring; forsiden',
+    },
+    {
       name: 'body',
       type: 'bodyPortableText',
       type: 'array',
-      title: 'Post body',
+      title: 'Artikkeltekst',
       of: [
         {
           type: 'block',
@@ -73,23 +79,23 @@ export default {
           // use your content.
           styles: [
             {title: 'Normal', value: 'normal'},
-            {title: 'H1', value: 'h1'},
-            {title: 'H2', value: 'h2'},
-            {title: 'H3', value: 'h3'},
-            {title: 'H4', value: 'h4'},
+            {title: 'Overskrift 1', value: 'h1'},
+            {title: 'Overskrift 2', value: 'h2'},
+            {title: 'Overskrift 3', value: 'h3'},
+            {title: 'Overskrift 4', value: 'h4'},
             {title: 'Quote', value: 'blockquote'}
           ],
           lists: [
-            {title: 'Bullet', value: 'bullet'},
-            {title: 'Numbered', value: 'number'}
+            {title: 'Kuleliste', value: 'bullet'},
+            {title: 'Nummerliste', value: 'number'}
           ],
           // Marks let you mark up inline text in the block editor.
           marks: {
             // Decorators usually describe a single property – e.g. a typographic
             // preference or highlighting by editors.
             decorators: [
-              {title: 'Strong', value: 'strong'},
-              {title: 'Emphasis', value: 'em'}
+              {title: 'Fet', value: 'strong'},
+              {title: 'Kursiv', value: 'em'}
             ],
             // Annotations can be any object structure – e.g. a link or a footnote.
             annotations: [
@@ -128,8 +134,8 @@ export default {
       slug: 'slug',
       media: 'image'
     },
-    prepare({title = 'No title', slug, media}) {
-      const path = `/blog/${slug.current}/`
+    prepare({title = 'Ingen tittel', slug, media}) {
+      const path = `/nyheter/${slug.current}/`
       return {
         title,
         media,

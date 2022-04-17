@@ -1,7 +1,7 @@
 <script context="module">
   export async function load({page, fetch}) {
     try {
-      const url = `/blog/${page.params.slug}.json`
+      const url = `/nyheter/${page.params.slug}.json`
       const res = await fetch(url)
       const data = await res.json()
 
@@ -13,7 +13,7 @@
     } catch (err) {
       return {
         status: 500,
-        error: new Error(`Could not load url`)
+        error: new Error(`Kunne ikke laste siden`)
       }
     }
   }
