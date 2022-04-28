@@ -14,6 +14,13 @@
   <nav>
     <ul>
       <li><a data-selected={path === '/'} href="/">Hjem</a></li>
+      <li><a data-selected={path === '/organisasjon'} href="/organisasjon">Organisasjon</a>
+        <ul>
+          <li><a data-selected={path === '/organisasjon/styret'} href="/organisasjon/styret">Styret i NAF</a></li>
+        </ul>
+      </li>
+      <li><a data-selected={path === '/nyheter'} href="/nyheter">NAF ærespris</a></li>
+      <li><a data-selected={path === '/nyheter'} href="/nyheter">Nyheter</a></li>
       <li><a data-selected={path === '/nyheter'} href="/nyheter">Nyheter</a></li>
     </ul>
   </nav>
@@ -36,7 +43,7 @@
 
   header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     padding: 1em;

@@ -18,7 +18,7 @@ export default {
               sites: [
                 {
                   buildHookId: '',
-                  title: 'Sanity Studio',
+                  title: 'Sanity Studio for NAFWeb',
                   name: 'sanity-svelte-kit-studio-vtn819qw',
                   apiId: '5b04525d-d683-4a27-9d0a-d6bda98b6426'
                 },

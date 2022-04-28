@@ -12,6 +12,7 @@
 <Footer />
 
 <style>
+
   :global(a) {
     color: #1a4d9e;
   }

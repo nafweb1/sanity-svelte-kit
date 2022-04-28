@@ -10,14 +10,14 @@ export default {
       name: 'title',
       type: 'string',
       title: 'Tittel',
-      description: 'Tittelen b&oslash;r v&aelig;re catcy, beskrivende og ikke for lang',
+      description: 'Tittelen bør være catchy, beskrivende og ikke for lang',
       validation: (Rule) => Rule.required()
     },
     {
       name: 'slug',
       type: 'slug',
       title: 'Korttekst',
-      description: 'Denne artikkelens adresse p&aring; nettstedet',
+      description: 'Denne artikkelens adresse på NAFWeb',
       options: {
         source: 'title',
         maxLength: 96
@@ -28,7 +28,7 @@ export default {
       name: 'publishedAt',
       type: 'datetime',
       title: 'Publiseringsdato',
-      description: 'Dette kan brukes for &aring; planlegge publisering av artikler'
+      description: 'Dette kan også brukes for å planlegge publisering av artikler'
     },
     {
       name: 'image',
@@ -61,8 +61,8 @@ export default {
     {
       name: 'featured',
       type: 'boolean',
-      title: 'Vises p&aring; forsiden',
-      description: 'Kryss av p&aring; denne dersom artikelen skal vises p&aring; forsiden',
+      title: 'Vis på forsiden',
+      description: 'Kryss av på denne dersom artikelen skal vises på forsiden',
     },
     {
       name: 'body',

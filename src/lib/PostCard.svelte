@@ -5,21 +5,22 @@
 </script>
 
 <article>
-  <h2>
-    <a rel="prefetch" href="/nyheter/{post.slug.current}">{post.title}</a>
-  </h2>
   {#if post.image}
     <div class="image">
       <SanityImage image={post.image} maxWidth={300} />
     </div>
   {/if}
+  <h2>
+    <a rel="prefetch" href="/nyheter/{post.slug.current}">{post.title}</a>
+  </h2>
+  <p>Dette skal være et utdrag</p>
 </article>
 
 <style>
   article {
     display: flex;
-    /* Show images first */
-    flex-direction: column-reverse;
+    border: 1px #000;
+    padding: 1rem;
   }
 
   h2 {
